@@ -1,0 +1,77 @@
+.bgcolor{
+  background-color: var(--backgroundTwo);
+  transition: all .3s;
+  
+}
+
+
+.meals {
+    max-width: 60rem;
+    width: 90%;
+    margin: 2rem auto;
+    animation: meals-appear 1s ease-out forwards;
+    background-color: var(--backgroundTwo);
+    transition: all 0.3s;
+    padding-top: 2rem;
+    
+  }
+  
+  .meals ul {
+    list-style: none;
+    margin: 0;
+    margin-left: -15rem;
+    display: grid;
+    grid-column-gap: 110px;
+    grid-row-gap: 30px;
+    grid-template-columns: repeat(4, minmax(265px, 1fr));
+    
+  }
+
+  .testgrid{
+    list-style: none;
+    margin: 0;
+    margin-left: -15rem;
+    display: grid;
+    grid-column-gap: 110px;
+    grid-row-gap: 30px;
+    grid-template-columns: repeat(4, minmax(265px, 1fr));
+  }
+  
+  @keyframes meals-appear {
+    from {
+      opacity: 0;
+      transform: translateY(3rem);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  
+.MealsLoading{
+  text-align: center;
+  color: white;
+
+}
+
+.MealsError{
+  text-align: center;
+  color: red;
+}
+
+.dropshadowBar{
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+  margin-top: 0.34rem;
+  position: relative;
+  z-index: 1;
+  background-color: var(--background);
+  color:var(--textcolor);
+  margin-left: -1.5rem;
+}
+
+.dzesttekstu{
+  color:var(--background);
+}
+

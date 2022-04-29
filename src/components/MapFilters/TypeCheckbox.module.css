@@ -1,0 +1,19 @@
+.kastewrap{
+    text-align: center;
+    margin-top: -1.7rem;
+    background-color: var(--background);
+}
+
+.texts{
+    color: var(--textcolor);
+    padding-left: 1.7rem;
+}
+
+.texts:hover{
+    cursor: pointer;
+}
+
+.checkboxs{
+    background-color: red;
+    cursor: pointer;
+}

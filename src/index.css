@@ -1,0 +1,39 @@
+
+* {
+  box-sizing: border-box;
+  font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+:root {
+  --background: #f8f8f8;
+  --backgroundTwo:#f3f3f3;
+  --text-primary: black;
+  --text-secondary: royalblue;
+  --accent: purple;
+  --textcolor: black;
+  --backgroundThree: #f3f3f3;
+  --textcolorTwo: #141414;
+  --borderBlackToWhite: #141414;
+}
+
+[data-theme='dark'] {
+  --background: #454545;
+  --backgroundTwo: #2c2c2c;
+  --text-primary: white;
+  --text-secondary: grey;
+  --accent: darkred;
+  --textcolor: white;
+  --backgroundThree: #2c2c2c;
+  --textcolorTwo: #ededed;
+  --borderBlackToWhite: #ededed;
+}
+
+html {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: var(--backgroundTwo);
+}
+

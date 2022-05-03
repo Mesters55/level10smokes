@@ -1,0 +1,43 @@
+.summaryBox{
+    display: grid;
+    grid-template-columns: 1fr 1fr 300px;
+    background: var(--nadeInfoBackground);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 30px;
+    margin-top: 1rem;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.summaryMessage{
+    padding: 80px 30px;
+    color: var(--text-primary);
+}
+
+.nadesInfoH1{
+    color: var(--text-primary);
+    margin: 0;
+    padding: 0;
+    font-weight: 300;
+    font-size: 2.2rem;
+    margin-bottom: 12px;
+}
+
+.mapLogo{
+    margin-left: 90%;
+    height: 220px;
+    width: 350px;
+    overflow: hidden;
+    -webkit-align-self: flex-end;
+    -ms-flex-item-align: flex-end;
+    align-self: flex-end;
+    padding-right: 70px;
+    padding-top: 30px;
+}
+
+.mapLogoIMG{
+    width: 100%;
+    display: block;
+}

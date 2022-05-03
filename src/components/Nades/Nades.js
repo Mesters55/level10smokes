@@ -4,6 +4,7 @@ import AvailableNades from "./AvailableNades";
 import NadesDetail from "./NadesDetail/NadesDetail";
 import MapSearch from "../MapFilters/MapSearch";
 import TypeCheckbox from "../MapFilters/TyoeCheckbox";
+import NadesInfo from "./NadesInfo/NadesInfo";
 
 import { Tabs } from "antd";
 import "antd/dist/antd.css";
@@ -47,7 +48,7 @@ const ikonaTrain = (
 const Nades = (props) => {
   const contentStyle = {
     size: "small",
-    tabPosition: 'left',
+    tabPosition: "left",
   };
   const [contentType, setContentType] = useState(false);
   const [loadedNadeId, setLoadedNadeId] = useState("");
@@ -243,22 +244,48 @@ const Nades = (props) => {
   if (contentType === 1) {
     dust = selecedNadeAfterFilter;
   } else {
-    dust = (
-      <AvailableNades items={dustFilter} onCardChange={onCardChange} />
-    );
+    dust = <AvailableNades items={dustFilter} onCardChange={onCardChange} />;
+  }
+
+  const nukeFilter = nade.filter((nades) => {
+    if (checkedNadeType === "") {
+      return (
+        nades.map === "Nuke" &&
+        nades.name.toLowerCase().includes(filteredSearch)
+      );
+    } else {
+      return (
+        nades.map === "Nuke" &&
+        nades.name.toLowerCase().includes(filteredSearch) &&
+        nades.type.includes(checkedNadeType)
+      );
+    }
+  });
+
+  let nuke = (
+    <AvailableNades
+      items={nukeFilter}
+      onCardChange={onCardChange}
+      onButtonClick={onButtonClick}
+    />
+  );
+  if (contentType === 1) {
+    nuke = selecedNadeAfterFilter;
+  } else {
+    nuke = <AvailableNades items={nukeFilter} onCardChange={onCardChange} />;
   }
 
   return (
     <Fragment>
       <Tabs
-        tabPosition = 'left'
+        tabPosition="left"
         className={classes.tabs}
         defaultActiveKey="1"
         type="card"
         value={contentStyle}
         width="100%"
       >
-        <TabPane  tab={ikonaMirage} key="1" >
+        <TabPane tab={ikonaMirage} key="1">
           <MapSearch onChangeFilter={filteredSearchHandler} />
           <TypeCheckbox onChangeFilter={setCheckedSmokeHandler} />
           {showReturn ? (
@@ -269,9 +296,12 @@ const Nades = (props) => {
               </button>
             </div>
           ) : (
-            <button className={classes.hidebutton} onClick={onButtonClick}>
-              Back
-            </button>
+            <div>
+              <NadesInfo />
+              <button className={classes.hidebutton} onClick={onButtonClick}>
+                Back
+              </button>
+            </div>
           )}
           {mirage}
         </TabPane>
@@ -293,7 +323,7 @@ const Nades = (props) => {
           {inferno}
         </TabPane>
         <TabPane tab={ikonaDust} key="3">
-        <MapSearch onChangeFilter={filteredSearchHandler} />
+          <MapSearch onChangeFilter={filteredSearchHandler} />
           <TypeCheckbox onChangeFilter={setCheckedSmokeHandler} />
           {showReturn ? (
             <div className={classes.buttonlocation}>
@@ -313,7 +343,21 @@ const Nades = (props) => {
           {}
         </TabPane>
         <TabPane tab={ikonaNuke} key="5">
-          {}
+          <MapSearch onChangeFilter={filteredSearchHandler} />
+          <TypeCheckbox onChangeFilter={setCheckedSmokeHandler} />
+          {showReturn ? (
+            <div className={classes.buttonlocation}>
+              {" "}
+              <button className={classes.button6} onClick={onButtonClick}>
+                Back
+              </button>
+            </div>
+          ) : (
+            <button className={classes.hidebutton} onClick={onButtonClick}>
+              Back
+            </button>
+          )}
+          {nuke}
         </TabPane>
         <TabPane tab={ikonaVertigo} key="6">
           {}

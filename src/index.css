@@ -14,11 +14,12 @@
   --backgroundThree: #f3f3f3;
   --textcolorTwo: #141414;
   --borderBlackToWhite: #141414;
+  --nadeInfoBackground: linear-gradient( 252.84deg, #ededed 40%, #f5f5f5 70% );
 }
 
 [data-theme='dark'] {
-  --background: #454545;
-  --backgroundTwo: #2c2c2c;
+  --background: #2c2c2c;
+  --backgroundTwo: #454545;
   --text-primary: white;
   --text-secondary: grey;
   --accent: darkred;
@@ -26,6 +27,7 @@
   --backgroundThree: #2c2c2c;
   --textcolorTwo: #ededed;
   --borderBlackToWhite: #ededed;
+  --nadeInfoBackground: linear-gradient( 252.84deg, #141414 40%, #1f1f1f 70% );
 }
 
 html {

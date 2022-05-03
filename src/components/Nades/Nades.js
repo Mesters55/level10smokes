@@ -297,7 +297,7 @@ const Nades = (props) => {
             </div>
           ) : (
             <div>
-              <NadesInfo />
+              <NadesInfo/>
               <button className={classes.hidebutton} onClick={onButtonClick}>
                 Back
               </button>

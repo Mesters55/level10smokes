@@ -59,6 +59,7 @@
     height: 4rem;
     z-index: 0;
     overflow: hidden;
+    cursor: pointer;
 }
 /* 
 .poga{

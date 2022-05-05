@@ -247,6 +247,34 @@ const Nades = (props) => {
     dust = <AvailableNades items={dustFilter} onCardChange={onCardChange} />;
   }
 
+  const overpassFilter = nade.filter((nades) => {
+    if (checkedNadeType === "") {
+      return (
+        nades.map === "Overpass" &&
+        nades.name.toLowerCase().includes(filteredSearch)
+      );
+    } else {
+      return (
+        nades.map === "Overpass" &&
+        nades.name.toLowerCase().includes(filteredSearch) &&
+        nades.type.includes(checkedNadeType)
+      );
+    }
+  });
+
+  let overpass = (
+    <AvailableNades
+      items={overpassFilter}
+      onCardChange={onCardChange}
+      onButtonClick={onButtonClick}
+    />
+  );
+  if (contentType === 1) {
+    overpass = selecedNadeAfterFilter;
+  } else {
+    overpass = <AvailableNades items={overpassFilter} onCardChange={onCardChange} />;
+  }
+
   const nukeFilter = nade.filter((nades) => {
     if (checkedNadeType === "") {
       return (
@@ -340,7 +368,21 @@ const Nades = (props) => {
           {dust}
         </TabPane>
         <TabPane tab={ikonaOverpass} key="4">
-          {}
+        <MapSearch onChangeFilter={filteredSearchHandler} />
+          <TypeCheckbox onChangeFilter={setCheckedSmokeHandler} />
+          {showReturn ? (
+            <div className={classes.buttonlocation}>
+              {" "}
+              <button className={classes.button6} onClick={onButtonClick}>
+                Back
+              </button>
+            </div>
+          ) : (
+            <button className={classes.hidebutton} onClick={onButtonClick}>
+              Back
+            </button>
+          )}
+          {overpass}
         </TabPane>
         <TabPane tab={ikonaNuke} key="5">
           <MapSearch onChangeFilter={filteredSearchHandler} />

@@ -16,6 +16,10 @@ function App() {
     defaultDark ? "dark" : "light"
   );
 
+  const refreshPage = () =>  {
+    window.location.reload(false)
+  }
+
   const switchTheme = () => {
     if (changeLogo === true) {
       setChangeLogo(false);
@@ -35,9 +39,10 @@ function App() {
         <header className="header">
           <div className="logowrap">
             {changeLogo ? (
-              <img className="logoheader" src={logo} alt="Nav atrasts"></img>
+              <img onClick={refreshPage} className="logoheader" src={logo} alt="Nav atrasts"></img>
             ) : (
               <img
+                onClick={refreshPage}
                 className="logoheader"
                 src={logodark}
                 alt="Nav atrasts"

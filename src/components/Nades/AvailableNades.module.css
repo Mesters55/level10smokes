@@ -1,7 +1,6 @@
 .bgcolor{
   background-color: var(--backgroundTwo);
-  transition: all .3s;
-  
+  transition: all .3s;  
 }
 
 
@@ -13,7 +12,7 @@
     background-color: var(--backgroundTwo);
     transition: all 0.3s;
     padding-top: 2rem;
-    
+
   }
   
   .meals ul {

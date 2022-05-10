@@ -7,6 +7,7 @@ const NadesDetail = (props) => {
   const [dotPosition, setDotPosition] = useState('top');
 
   function onChange(a, b, c) {
+    setDotPosition('top');
     console.log(a, b, c);
   }
 
@@ -31,6 +32,7 @@ const NadesDetail = (props) => {
           <Carousel dotPosition={dotPosition} afterChange={onChange}>
             <div>
             <iframe
+            title="iframeTitle"
             src={props.video}
             frameBorder="0"
             scrolling="no"

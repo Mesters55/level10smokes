@@ -256,8 +256,8 @@ const Nades = (props) => {
     } else {
       return (
         nades.map === "Overpass" &&
-        nades.name.toLowerCase().includes(filteredSearch) &&
-        nades.type.includes(checkedNadeType)
+        nades.name.toLowerCase().includes(filteredSearch) 
+
       );
     }
   });
@@ -302,6 +302,35 @@ const Nades = (props) => {
   } else {
     nuke = <AvailableNades items={nukeFilter} onCardChange={onCardChange} />;
   }
+
+  const vertigoFilter = nade.filter((nades) => {
+    if (checkedNadeType === "") {
+      return (
+        nades.map === "Vertigo" &&
+        nades.name.toLowerCase().includes(filteredSearch)
+      );
+    } else {
+      return (
+        nades.map === "Vertigo" &&
+        nades.name.toLowerCase().includes(filteredSearch) &&
+        nades.type.includes(checkedNadeType)
+      );
+    }
+  });
+
+  let vertigo = (
+    <AvailableNades
+      items={vertigoFilter}
+      onCardChange={onCardChange}
+      onButtonClick={onButtonClick}
+    />
+  );
+  if (contentType === 1) {
+    vertigo = selecedNadeAfterFilter;
+  } else {
+    vertigo = <AvailableNades items={vertigoFilter} onCardChange={onCardChange} />;
+  }
+  
 
   return (
     <Fragment>
@@ -402,7 +431,21 @@ const Nades = (props) => {
           {nuke}
         </TabPane>
         <TabPane tab={ikonaVertigo} key="6">
-          {}
+        <MapSearch onChangeFilter={filteredSearchHandler} />
+          <TypeCheckbox onChangeFilter={setCheckedSmokeHandler} />
+          {showReturn ? (
+            <div className={classes.buttonlocation}>
+              {" "}
+              <button className={classes.button6} onClick={onButtonClick}>
+                Back
+              </button>
+            </div>
+          ) : (
+            <button className={classes.hidebutton} onClick={onButtonClick}>
+              Back
+            </button>
+          )}
+          {vertigo}
         </TabPane>
         <TabPane tab={ikonaAncient} key="7">
           {}

@@ -84,13 +84,13 @@ li:hover {
 }
 
 .buttonlocation {
-  margin-top: 1rem;
-  margin-left: 25%;
+  margin-top: 3rem;
+  margin-left: 5rem;
 }
 
 .button6 {
-  align-items: center;
-  background-color: var(--background);
+
+  background-color: var(--backgroundFour);
   border: 1px solid var(--textcolor);
   border-radius: 0.25rem;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;

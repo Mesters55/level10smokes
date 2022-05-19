@@ -7,6 +7,7 @@
 :root {
   --background: #f8f8f8;
   --backgroundTwo:#f3f3f3;
+  --backgroundFour: #f8f8f8;
   --text-primary: black;
   --text-secondary: royalblue;
   --accent: purple;
@@ -20,6 +21,7 @@
 [data-theme='dark'] {
   --background: #2c2c2c;
   --backgroundTwo: #454545;
+  --backgroundFour: #454545;
   --text-primary: white;
   --text-secondary: grey;
   --accent: darkred;

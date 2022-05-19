@@ -6,6 +6,7 @@ import { SettingOutlined } from "@ant-design/icons";
 import useLocalStorage from "use-local-storage";
 import "./App.css";
 
+import Tests123 from "./components/test/test";
 import logo from "./components/assets/logo.png";
 import logodark from "./components/assets/logodark.png";
 
@@ -16,9 +17,9 @@ function App() {
     defaultDark ? "dark" : "light"
   );
 
-  const refreshPage = () =>  {
-    window.location.reload(false)
-  }
+  const refreshPage = () => {
+    window.location.reload(false);
+  };
 
   const switchTheme = () => {
     if (changeLogo === true) {
@@ -32,6 +33,16 @@ function App() {
   };
 
   const [changeLogo, setChangeLogo] = useState(true);
+  const [showInfo, setShowInfo] = useState(0);
+
+
+  const showInfoHandler = () =>{
+    if(showInfo === 0){
+    setShowInfo(1);
+    }else{
+      setShowInfo(0);
+    }
+  }
 
   return (
     <div className="app" data-theme={theme}>
@@ -39,7 +50,12 @@ function App() {
         <header className="header">
           <div className="logowrap">
             {changeLogo ? (
-              <img onClick={refreshPage} className="logoheader" src={logo} alt="Nav atrasts"></img>
+              <img
+                onClick={refreshPage}
+                className="logoheader"
+                src={logo}
+                alt="Nav atrasts"
+              ></img>
             ) : (
               <img
                 onClick={refreshPage}
@@ -49,6 +65,11 @@ function App() {
               ></img>
             )}
           </div>
+          <div className='faqWrap'>
+              <button className='faq' onClick={showInfoHandler}>
+                Informācija
+              </button>
+          </div>
         </header>
       </div>
       <div className="themeWrap">
@@ -57,7 +78,7 @@ function App() {
         </button>
       </div>
       <Header></Header>
-      <Nades />
+      {showInfo ? <Tests123></Tests123> : <Nades></Nades>} 
       <Footer></Footer>
     </div>
   );

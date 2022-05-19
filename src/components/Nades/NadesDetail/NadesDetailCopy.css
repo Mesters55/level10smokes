@@ -2,7 +2,7 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-top: -3rem;
+    margin-top: 1rem;
     width: 60rem;
     height: 42.5rem;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
@@ -19,11 +19,10 @@
     -ms-flex: 1;
     flex: 1;
     white-space: nowrap;
+    border: 1px solid var(--textcolor);
     border-radius: 1rem 0rem 0rem 0rem;
-    border: 1px solid var(--backgroundFour);
-    background: var(--backgroundFour);
+    background: var(--background);
     color: var(--textcolorTwo);
-    border-right: 1px solid var(--background);
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -40,8 +39,8 @@
     -ms-flex: 1;
     flex: 1;
     white-space: nowrap;
-    border: 1px solid var(--backgroundFour);
-    background: var(--backgroundFour);
+    border: 1px solid var(--textcolor);
+    background: var(--background);
     color: var(--textcolorTwo);
     display: -webkit-box;
     display: -webkit-flex;
@@ -63,11 +62,10 @@
     -ms-flex: 1;
     flex: 1;
     white-space: nowrap;
+    border: 1px solid var(--textcolor);
     border-radius: 0rem 1rem 0rem 0rem;
-    border: 1px solid var(--backgroundFour);
-    background: var(--backgroundFour);
+    background: var(--background);
     color: var(--textcolorTwo);
-    border-left: 1px solid var(--background);
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -106,9 +104,9 @@
 .iframeVideo{
     height: 33.8rem;
     width: 100%;
-    border: 1px solid var(--backgroundFour);
-    background: var(--backgroundFour);
-    color: var(--textcolorTwo);
+    border-left: 1px solid var(--textcolor);
+    border-right: 1px solid var(--textcolor);
+    border-bottom: 1px solid var(--textcolor);
 }
 
 
@@ -123,9 +121,8 @@
     border-left: 1px solid var(--textcolor);
     border-right: 1px solid var(--textcolor);
     border-bottom: 1px solid var(--textcolor);
-    border: 1px solid var(--backgroundFour);
-    background: var(--backgroundFour);
-    color: var(--textcolorTwo);
+    background: var(--background);
+    color: var(--textcolor);
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -155,8 +152,7 @@
     border-left: 1px solid var(--textcolor);
     border-right: 1px solid var(--textcolor);
     border-bottom: 1px solid var(--textcolor);
-    border: 1px solid var(--backgroundFour);
-    background: var(--backgroundFour);
+    background: var(--background);
     color: var(--textcolorTwo);
     display: -webkit-box;
     display: -webkit-flex;

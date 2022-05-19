@@ -61,6 +61,36 @@
     overflow: hidden;
     cursor: pointer;
 }
+
+.faq{
+  text-align: center;
+  margin-top: -3rem;
+  margin-left: auto;
+  margin-right: auto;
+  color: var(--text-primary);
+  background-color: var(--background);
+  border: 2px var(--text-primary) solid;
+  transition: all .5s;
+  width: 10rem;
+  height: 2rem;
+  margin: 1rem;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+
+.faq:hover{
+  cursor: pointer;
+  border-color: var(--textcolor);
+  box-shadow: var(--textcolor);
+  color: var(--backgroundTwo);
+  background-color: var(--textcolor);
+}
+
+.faqWrap{
+  margin-top: -4rem;
+  margin-left: 74%;
+}
+
 /* 
 .poga{
     background-color: red;

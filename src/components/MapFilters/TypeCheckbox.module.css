@@ -14,11 +14,16 @@
 }
 
 .checkboxs{
-    background-color: red;
+    background-color: var(--backgroundTwo);
     cursor: pointer;
 }
 
 .typelogo{
     height: 38px;
     width: 38px;
+}
+
+.labelName{
+    padding-right: 1rem;
+    color: var(--textcolor);
 }

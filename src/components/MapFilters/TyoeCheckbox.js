@@ -1,7 +1,6 @@
 import React from "react";
 
 import classes from "./TypeCheckbox.module.css";
-import smokelogo from './smokeicon.png';
 const TypeCheckbox = (props) => {
   const setCheckedTypeHandler = (event) => {
     props.onChangeFilter(event.target.value);
@@ -11,28 +10,17 @@ const TypeCheckbox = (props) => {
   return (
     <div className={classes.kastewrap}>
       <div className={classes.kaste}>
-        <label className={classes.texts}><img className={classes.typelogo} src={smokelogo} alt='pictureNotFound' /></label>
-        <input
+        <label className={classes.labelName}>Filter By Smoke</label>
+        <select
           className={classes.checkboxs}
-          type="checkbox"
-          value="Smoke"
-          name="Smoke"
+          value={props.selected}
           onChange={setCheckedTypeHandler}
-        />
-        <label className={classes.texts}>Flash   </label>
-        <input
-          className={classes.checkboxs}
-          type="checkbox"
-          value="Flash"
-          onChange={setCheckedTypeHandler}
-        />
-        <label className={classes.texts}>Molotov   </label>
-        <input
-          className={classes.checkboxs}
-          type="checkbox"
-          value="Molotov"
-          onChange={setCheckedTypeHandler}
-        />
+        >
+          <option value="">SELECT</option>
+          <option value="Smoke">Smoke</option>
+          <option value="Flash">Flash</option>
+          <option value="Molotov">Molotov</option>
+        </select>
       </div>
     </div>
   );

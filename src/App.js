@@ -6,7 +6,7 @@ import { SettingOutlined } from "@ant-design/icons";
 import useLocalStorage from "use-local-storage";
 import "./App.css";
 
-import Tests123 from "./components/test/test";
+import InfoPage from "./components/test/infoPage";
 import logo from "./components/assets/logo.png";
 import logodark from "./components/assets/logodark.png";
 
@@ -78,7 +78,7 @@ function App() {
         </button>
       </div>
       <Header></Header>
-      {showInfo ? <Tests123></Tests123> : <Nades></Nades>} 
+      {showInfo ? <InfoPage></InfoPage> : <Nades></Nades>} 
       <Footer></Footer>
     </div>
   );

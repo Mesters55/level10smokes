@@ -6,6 +6,7 @@ import { SettingOutlined } from "@ant-design/icons";
 import useLocalStorage from "use-local-storage";
 import "./App.css";
 
+import News from "./components/News/News";
 import InfoPage from "./components/test/infoPage";
 import logo from "./components/assets/logo.png";
 import logodark from "./components/assets/logodark.png";
@@ -34,15 +35,23 @@ function App() {
 
   const [changeLogo, setChangeLogo] = useState(true);
   const [showInfo, setShowInfo] = useState(0);
+  const [showNews, setShowNews] = useState(0);
 
-
-  const showInfoHandler = () =>{
-    if(showInfo === 0){
-    setShowInfo(1);
-    }else{
+  const showInfoHandler = () => {
+    if (showInfo === 0) {
+      setShowInfo(1);
+    } else {
       setShowInfo(0);
     }
-  }
+  };
+
+  const showNewshandler = () => {
+    if (showNews === 0) {
+      setShowNews(1);
+    } else {
+      setShowNews(0);
+    }
+  };
 
   return (
     <div className="app" data-theme={theme}>
@@ -65,10 +74,15 @@ function App() {
               ></img>
             )}
           </div>
-          <div className='faqWrap'>
-              <button className='faq' onClick={showInfoHandler}>
-                Informācija
-              </button>
+          <div className="faqWrap">
+            <button className="faq" onClick={showInfoHandler}>
+              Informācija
+            </button>
+          </div>
+          <div className="faqWrapNews">
+            <button className="faqNews" onClick={showNewshandler}>
+              Jaunumi
+            </button>
           </div>
         </header>
       </div>
@@ -78,7 +92,8 @@ function App() {
         </button>
       </div>
       <Header></Header>
-      {showInfo ? <InfoPage></InfoPage> : <Nades></Nades>} 
+      {showInfo ? <InfoPage></InfoPage> : <Nades></Nades>}
+      {showNews ? <News></News> : <Nades></Nades>}
       <Footer></Footer>
     </div>
   );

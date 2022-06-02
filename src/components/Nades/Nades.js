@@ -193,12 +193,12 @@ const Nades = (props) => {
     if (checkedNadeType === "") {
       return (
         nades.map === "Inferno" &&
-        nades.name.toLowerCase().includes(filteredSearch)
+        nades.name.includes(filteredSearch)
       );
     } else {
       return (
         nades.map === "Inferno" &&
-        nades.name.toLowerCase().includes(filteredSearch) &&
+        nades.name.includes(filteredSearch) &&
         nades.type.includes(checkedNadeType)
       );
     }
@@ -223,12 +223,12 @@ const Nades = (props) => {
     if (checkedNadeType === "") {
       return (
         nades.map === "Dust" &&
-        nades.name.toLowerCase().includes(filteredSearch)
+        nades.name.includes(filteredSearch)
       );
     } else {
       return (
         nades.map === "Dust" &&
-        nades.name.toLowerCase().includes(filteredSearch) &&
+        nades.name.includes(filteredSearch) &&
         nades.type.includes(checkedNadeType)
       );
     }
@@ -251,12 +251,12 @@ const Nades = (props) => {
     if (checkedNadeType === "") {
       return (
         nades.map === "Overpass" &&
-        nades.name.toLowerCase().includes(filteredSearch)
+        nades.name.includes(filteredSearch)
       );
     } else {
       return (
         nades.map === "Overpass" &&
-        nades.name.toLowerCase().includes(filteredSearch)
+        nades.name.includes(filteredSearch)
       );
     }
   });
@@ -280,12 +280,12 @@ const Nades = (props) => {
     if (checkedNadeType === "") {
       return (
         nades.map === "Nuke" &&
-        nades.name.toLowerCase().includes(filteredSearch)
+        nades.name.includes(filteredSearch)
       );
     } else {
       return (
         nades.map === "Nuke" &&
-        nades.name.toLowerCase().includes(filteredSearch) &&
+        nades.name.includes(filteredSearch) &&
         nades.type.includes(checkedNadeType)
       );
     }
@@ -308,12 +308,12 @@ const Nades = (props) => {
     if (checkedNadeType === "") {
       return (
         nades.map === "Vertigo" &&
-        nades.name.toLowerCase().includes(filteredSearch)
+        nades.name.includes(filteredSearch)
       );
     } else {
       return (
         nades.map === "Vertigo" &&
-        nades.name.toLowerCase().includes(filteredSearch) &&
+        nades.name.includes(filteredSearch) &&
         nades.type.includes(checkedNadeType)
       );
     }
@@ -338,12 +338,12 @@ const Nades = (props) => {
     if (checkedNadeType === "") {
       return (
         nades.map === "Ancient" &&
-        nades.name.toLowerCase().includes(filteredSearch)
+        nades.name.includes(filteredSearch)
       );
     } else {
       return (
         nades.map === "Ancient" &&
-        nades.name.toLowerCase().includes(filteredSearch) &&
+        nades.name.includes(filteredSearch) &&
         nades.type.includes(checkedNadeType)
       );
     }
@@ -369,12 +369,12 @@ const Nades = (props) => {
     if (checkedNadeType === "") {
       return (
         nades.map === "Train" &&
-        nades.name.toLowerCase().includes(filteredSearch)
+        nades.name.includes(filteredSearch)
       );
     } else {
       return (
         nades.map === "Train" &&
-        nades.name.toLowerCase().includes(filteredSearch) &&
+        nades.name.includes(filteredSearch) &&
         nades.type.includes(checkedNadeType)
       );
     }

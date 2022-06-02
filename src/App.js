@@ -79,11 +79,6 @@ function App() {
               Informācija
             </button>
           </div>
-          <div className="faqWrapNews">
-            <button className="faqNews" onClick={showNewshandler}>
-              Jaunumi
-            </button>
-          </div>
         </header>
       </div>
       <div className="themeWrap">
@@ -93,7 +88,6 @@ function App() {
       </div>
       <Header></Header>
       {showInfo ? <InfoPage></InfoPage> : <Nades></Nades>}
-      {showNews ? <News></News> : <Nades></Nades>}
       <Footer></Footer>
     </div>
   );

@@ -1,3 +1,7 @@
+.ant-tabs-tab{
+  background-color: red;
+}
+
 .mapes {
   display: flex;
   list-style-type: none;

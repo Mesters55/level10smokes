@@ -1,8 +1,3 @@
-.ant-tabs-tab{
-  background-color: var(--background);
-  border: 1px solid var(--backgroundTwo);
-}
-
 .mapes {
   display: flex;
   list-style-type: none;

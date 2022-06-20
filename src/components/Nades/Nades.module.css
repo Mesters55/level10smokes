@@ -1,5 +1,6 @@
 .ant-tabs-tab{
-  background-color: red;
+  background-color: var(--background);
+  border: 1px solid var(--backgroundTwo);
 }
 
 .mapes {

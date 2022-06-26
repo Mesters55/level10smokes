@@ -1,23 +1,10 @@
 import "./info.css";
-import emailjs from 'emailjs-com'
-import React, { useState } from "react";
 
 const Info = () =>{
 
 
     const [showSent, setShowSent] = useState(false);
     //Funkcija, kas izpildās uz onSubmit, tādējādi aizsūtot ēpastu uz niks.mesters.lvt@gmail.com
-
-    function sendEmailHandler(e){
-        setShowSent(true);
-        e.preventDefault();
-        emailjs.sendForm('service_zri1tlh',
-         'template_xlunnpz',
-          e.target,
-        'KwXSJmBn2_vnF0ZNI').then(res =>{
-            console.log(res);
-        }).catch(err=> console.log(err));
-    }
 
     return(
       <div className="content">

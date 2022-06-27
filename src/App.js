@@ -76,7 +76,7 @@ function App() {
           </div>
           <div className="faqWrap">
             <button className="faq" onClick={showInfoHandler}>
-              Informācija
+              Saziņa
             </button>
           </div>
         </header>
